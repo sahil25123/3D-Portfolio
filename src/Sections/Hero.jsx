@@ -1,10 +1,8 @@
 import React from 'react'
 
-const words=[
-  { text :"ideas"  , imgPath :"/images/ideas.svg"},
-{ text :"Concepts"  , imgPath :"/images/concepts.svg"},
-{ text :"ideas"  , imgPath :"/images/ideas.svg"},
-{ text :"ideas"  , imgPath :"/images/ideas.svg"}]
+import { words } from '../Constants'
+import Button from '../Components/Button'
+import HeroExperience from '../Components/HeroModels/HeroExperience'
 
 const Hero = () => {
   return (
@@ -32,17 +30,29 @@ const Hero = () => {
 
                 ))}
               </span>
-            </span> </h1>
-          <h1>into real project</h1>
+            </span>
+            </h1>
+          <h1>into real projects</h1>
           <h1> that deliver results</h1>
-
         </div>
+        <p className='text-white-50 md:text-xl relative
+         z-10 pointer-events-none'> 
+         Hi, I'm Jagrat — a MERN Stack Developer passionate
+          about crafting full-stack web solutions.</p>
+          <Button className="md:w-80 md:h-16 w-60 h-12" 
+          id="button"
+          text="see my work"/>
 
       </div>
 
     </header>
 
     {/* {Right hero Content} */}
+    <figure className='hero-3d-layout border-red-200 border-2'>
+      <HeroExperience/>
+
+    </figure>
+
 
     </div>
 
