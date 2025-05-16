@@ -6,6 +6,7 @@ import { Room } from './Room'
 import { Sahil } from './Sahil-GLB'
 import HeroLights from './HeroLights'
 import * as THREE from 'three'
+import Particles from './Particle'
 
 // Animation component for subtle movement
 const AnimatedModel = ({ children, isMobile }) => {
@@ -69,12 +70,13 @@ const HeroExperience = () => {
         <OrbitControls enableZoom={true} enableRotate={false} />
 
         <HeroLights />
+        <Particles count={50}/>
         
         {/* Environment and shadows */}
         <Environment preset="city" />
         <ContactShadows
           position={[0, -4, 0]}
-          opacity={0.4}
+          opacity={0.6}
           scale={10}
           blur={2.5}
           far={4}

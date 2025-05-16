@@ -3,8 +3,28 @@ import React from 'react'
 import { words } from '../Constants'
 import Button from '../Components/Button'
 import HeroExperience from '../Components/HeroModels/HeroExperience'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const Hero = () => {
+  useGSAP(() => {
+    gsap.fromTo(".hero-text h1",
+      {
+        y:50 , 
+        opacity:0 
+      },
+      {
+        y:0, 
+        opacity :1,
+        stagger:0.3,
+        duration: 1,
+        ease: "power1.inOut"
+
+      }
+    )
+
+
+  })
   return (
    <section id="hero" className='relative overflow-hidden'>
     <div className='absolute top-0 left-0 z-10'>
@@ -52,9 +72,8 @@ const Hero = () => {
       <HeroExperience/>
 
     </figure>
-
-
     </div>
+    
 
    </section>
   )

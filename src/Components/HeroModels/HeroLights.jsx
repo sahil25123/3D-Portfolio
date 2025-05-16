@@ -36,6 +36,24 @@ const HeroLights = () => {
         intensity={0.5}
         color="#ffffff"
       />
+      
+      {/* Spotlight for foot glow */}
+      <spotLight
+        position={[0, -5, 0]}
+        intensity={1.5}
+        angle={0.3}
+        penumbra={0.2}
+        color="#ffffff"
+      />
+      
+      {/* Platform light */}
+      <spotLight
+        position={[0, -6, 0]}
+        intensity={0.5}
+        angle={0.8}
+        penumbra={0.5}
+        color="#b9d5ff"
+      />
     </>
   )
 }
