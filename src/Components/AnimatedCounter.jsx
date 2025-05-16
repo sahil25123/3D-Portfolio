@@ -1,5 +1,6 @@
 import React from 'react'
 import { counterItems } from '../Constants'
+import CountUp from 'react-countup'
 
 const AnimatedCounter = () => {
   return (
@@ -9,7 +10,8 @@ const AnimatedCounter = () => {
                 <div className='bg-zinc-900 rounded-lg p-10 flex flex-col'>
                 <div className='counter-number text-white text-5xl font-bold mb-2'
                  key={counterItems.label}>
-                     0 {item.suffix}
+                    <CountUp suffix={item.suffix} end={item.value}/>
+                    
                 </div>
                 <div className='text-white-50 text-lg'>
                     {item.label}
