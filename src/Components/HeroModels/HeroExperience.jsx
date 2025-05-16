@@ -1,36 +1,87 @@
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import React from 'react'
+import { OrbitControls, Environment, ContactShadows, PresentationControls } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import React, { Suspense } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Room } from './Room'
 import { Sahil } from './Sahil-GLB'
 import HeroLights from './HeroLights'
+import * as THREE from 'three'
+
+// Animation component for subtle movement
+const AnimatedModel = ({ children, isMobile }) => {
+  const group = React.useRef()
+  
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime()
+    group.current.rotation.y = THREE.MathUtils.lerp(
+      group.current.rotation.y,
+      Math.sin(t / 2) / 6,
+      0.1
+    )
+    group.current.position.y = THREE.MathUtils.lerp(
+      group.current.position.y,
+      Math.sin(t / 2) / 4,
+      0.1
+    )
+  })
+
+  // Increased scale for both desktop and mobile
+  return (
+    <group ref={group} scale={isMobile ? 2.2 : 3.5} position={[0, -2.5, 0]}>
+      {children}
+    </group>
+  )
+}
 
 const HeroExperience = () => {
-    const isTablet = useMediaQuery({query :"(max-width :1024px)"});
-    const isMobile = useMediaQuery({query :'(max-width:768px)'});
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
+
   return (
-   <Canvas camera={{position :[0,0,15] , fov :45}}>
-   
+    <Canvas
+      camera={{
+        position: [0, 0, 8],
+        fov: 50,
+        near: 0.1,
+        far: 1000
+      }}
+      gl={{
+        antialias: true,
+        toneMapping: THREE.ACESFilmicToneMapping,
+        toneMappingExposure: 1.2,
+        outputEncoding: THREE.sRGBEncoding
+      }}
+    >
+      <Suspense fallback={null}>
+        <PresentationControls
+          global={false}
+          rotation={[0, 0, 0]}
+          polar={[-Math.PI / 4, Math.PI / 4]}
+          azimuth={[-Math.PI / 3, Math.PI / 3]}
+          config={{ mass: 2, tension: 400 }}
+          snap={null}
+          touch-action="none"
+        >
+          <AnimatedModel isMobile={isMobile}>
+            <Sahil />
+          </AnimatedModel>
+        </PresentationControls>
+        <OrbitControls enableZoom={true} enableRotate={false} />
 
-    <OrbitControls 
-    enablePan = {false}
-    enableZoom={!isTablet}
-    maxDistance={20}
-    minDistance={5}
-    minPolarAngle={Math.PI /5}
-    maxPolarAngle={Math.PI /2}/>
+        <HeroLights />
+        
+        {/* Environment and shadows */}
+        <Environment preset="city" />
+        <ContactShadows
+          position={[0, -4, 0]}
+          opacity={0.4}
+          scale={10}
+          blur={2.5}
+          far={4}
+        />
 
-    <HeroLights/>
-
-    <group
-    scale={isMobile? 0.7:1}
-    position={[0, -3.5 , 0]}>
-        <Sahil/>
-
-    </group>
-    
-   </Canvas>
+      </Suspense>
+    </Canvas>
   )
 }
 

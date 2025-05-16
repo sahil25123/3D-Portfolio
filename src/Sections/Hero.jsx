@@ -48,7 +48,7 @@ const Hero = () => {
     </header>
 
     {/* {Right hero Content} */}
-    <figure className='hero-3d-layout border-red-200 border-2'>
+    <figure className='hero-3d-layout'>
       <HeroExperience/>
 
     </figure>
