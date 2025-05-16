@@ -34,7 +34,7 @@ const AnimatedModel = ({ children, isMobile }) => {
 }
 
 const HeroExperience = () => {
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
+//   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" })
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
   return (
