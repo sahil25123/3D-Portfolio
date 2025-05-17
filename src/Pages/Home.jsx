@@ -4,6 +4,7 @@ import Showcase from '../Sections/Showcase'
 import Navbar from '../Components/Navbar'
 import LogoSection from '../Components/LogoSection'
 import FeatureCards from '../Sections/FeatureCards'
+import TechStack from '../Sections/TechStack'
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
       <Showcase/>
       <LogoSection/>
       <FeatureCards/>
+      {/* Journey Section */}
+      <TechStack/>
     </div>
   )
 }
