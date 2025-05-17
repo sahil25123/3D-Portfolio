@@ -65,3 +65,23 @@
     imgPath: "/images/logos/github-logo.png",
   },
 ];
+
+
+ export const abilities = [
+   {
+    imgPath: "/images/creative.png",
+    title: "Creative Developer",
+    desc: "Passionate about building responsive and visually engaging web interfaces using HTML, CSS, and JavaScript.",
+  },
+  {
+    imgPath: "/images/quick.png",
+    title: "Quick Learner",
+    desc: "Always eager to explore new technologies and adapt quickly to different development environments.",
+  },
+  {
+    imgPath: "/images/solver.png",
+    title: "Problem Solver",
+    desc: "Enjoy tackling complex problems with logical thinking and a structured approach.",
+  }
+ 
+];
