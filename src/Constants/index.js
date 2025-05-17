@@ -32,13 +32,13 @@
 
  export const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    imgPath: "/images/logos/react-logo.png",
   },
   {
-    imgPath: "/images/logos/company-logo-2.png",
+    imgPath: "/images/logos/express-logo.png",
   },
   {
-    imgPath: "/images/logos/company-logo-3.png",
+    imgPath: "/images/logos/mongodb-logo.png",
   },
   {
     imgPath: "/images/logos/company-logo-4.png",
