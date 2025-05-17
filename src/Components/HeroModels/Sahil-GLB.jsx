@@ -7,6 +7,21 @@ import React from 'react'
 import { useGraph } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
+import * as THREE from 'three'
+
+// Custom glowing material for the platform
+const GlowingMaterial = () => {
+  const material = new THREE.MeshStandardMaterial({
+    color: '#4a90e2',
+    emissive: '#4a90e2',
+    emissiveIntensity: 0.5,
+    transparent: true,
+    opacity: 0.3,
+    metalness: 0.8,
+    roughness: 0.2,
+  })
+  return material
+}
 
 export function Sahil(props) {
   const { scene } = useGLTF('/models/sahil-GLB.glb')
@@ -26,6 +41,32 @@ export function Sahil(props) {
         <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} morphTargetDictionary={nodes.EyeRight.morphTargetDictionary} morphTargetInfluences={nodes.EyeRight.morphTargetInfluences} />
         <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials.Wolf3D_Skin} skeleton={nodes.Wolf3D_Head.skeleton} morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences} />
         <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials.Wolf3D_Teeth} skeleton={nodes.Wolf3D_Teeth.skeleton} morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary} morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences} />
+      </group>
+      
+      {/* Glowing platform */}
+      <group position={[0, -1, 0]}>
+        {/* Glowing top surface */}
+        <mesh rotation={[-Math.PI / 2, 0, 0]}>
+          <circleGeometry args={[1.5, 32]} />
+          <meshStandardMaterial
+            color="#4a90e2"
+            emissive="#4a90e2"
+            emissiveIntensity={0.5}
+            transparent
+            opacity={0.3}
+            metalness={0.8}
+            roughness={0.2}
+          />
+        </mesh>
+        {/* Platform body */}
+        <mesh position={[0, -0.1, 0]}>
+          <cylinderGeometry args={[1.5, 1.5, 0.2, 32]} />
+          <meshStandardMaterial
+            color="#2a4a8a"
+            metalness={0.9}
+            roughness={0.1}
+          />
+        </mesh>
       </group>
     </group>
   )

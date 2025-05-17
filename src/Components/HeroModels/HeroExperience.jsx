@@ -28,7 +28,7 @@ const AnimatedModel = ({ children, isMobile }) => {
 
   // Increased scale for both desktop and mobile
   return (
-    <group ref={group} scale={isMobile ? 2.2 : 3.5} position={[0, -2.5, 0]}>
+    <group ref={group} scale={isMobile ? 2.2 : 3.5} position={[0, -2.8, 0]}>
       {children}
     </group>
   )

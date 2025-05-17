@@ -75,6 +75,7 @@ const Hero = () => {
     </figure>
     </div>
     <AnimatedCounter/>
+    
 
    </section>
   )
