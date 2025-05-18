@@ -13,20 +13,16 @@
 
  export const navLinks = [
   {
-    name: "Work",
-    link: "#work",
+    name: "Projects",
+    link: "#project",
   },
   {
-    name: "Experience",
-    link: "#experience",
+    name: "Journey",
+    link: "#journey",
   },
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -138,20 +134,20 @@ export const socialImgs = [
 export const expCards = [
   {
     review: "Embarked on my journey in Computer Science with a strong passion for technology and problem-solving.",
-    imgPath: "/images/journey1.png",
-    logoPath: "/images/niet-logo.png",
+    imgPath: "/images/niet-logo.png",
+    logoPath: "/images/niet2.png",
     title: "Started B.Tech in CSE (Data Science)",
     date: "August 2022 - Present",
     responsibilities: [
       "Enrolled at Noida Institute of Engineering and Technology (NIET).",
-      "Built a strong foundation in programming languages like Java, Python, and C.",
+      "Built a strong foundation in programming languages like Java, Python.  ",
       "Started exploring frontend development with HTML, CSS, and JavaScript.",
     ],
   },
   {
     review: "Enhanced my development skills by working on multiple personal projects and participating in hackathons.",
-    imgPath: "/images/journey2.png",
-    logoPath: "/images/project-logo.png",
+    imgPath: "/images/hackathon.png",
+    logoPath: "/images/hackathon-circle.png",
     title: "Hands-On Projects & Hackathons",
     date: "2023 - Present",
     responsibilities: [
@@ -162,13 +158,14 @@ export const expCards = [
   },
   {
     review: "Focused on full-stack development and advanced tools while applying for internships.",
-    imgPath: "/images/journey3.png",
-    logoPath: "/images/fullstack-logo.png",
+    imgPath: "/images/image193.png",
+    logoPath: "/images/image193.png",
     title: "Learning MERN Stack & Freelance Practice",
     date: "2024 - Present",
     responsibilities: [
       "Built StaySphere using Express, Node.js, and MongoDB.",
       "Practicing full-stack projects with MERN stack.",
+      "Designed ChatterBox – a real-time chat and video call app using WebRTC, Socket.io, and Node.js.",
       "Working on HealthLine, a telemedicine platform with WebRTC, Firebase, and Twilio API.",
     ],
   },

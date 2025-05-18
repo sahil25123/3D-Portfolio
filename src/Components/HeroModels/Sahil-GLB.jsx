@@ -47,7 +47,7 @@ export function Sahil(props) {
       <group position={[0, -1, 0]}>
         {/* Glowing top surface */}
         <mesh rotation={[-Math.PI / 2, 0, 0]}>
-          <circleGeometry args={[1.5, 32]} />
+          <circleGeometry args={[1.05, 32]} />
           <meshStandardMaterial
             color="#4a90e2"
             emissive="#4a90e2"
@@ -60,7 +60,7 @@ export function Sahil(props) {
         </mesh>
         {/* Platform body */}
         <mesh position={[0, -0.1, 0]}>
-          <cylinderGeometry args={[1.5, 1.5, 0.2, 32]} />
+          <cylinderGeometry args={[1.05, 1.05, 0.2, 32]} />
           <meshStandardMaterial
             color="#2a4a8a"
             metalness={0.9}

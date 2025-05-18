@@ -48,13 +48,16 @@ const Showcase = () => {
   }, []);
 
   return (
-    <section  ref={sectionRef} id="work" className='app-showcase'>
+    <section  ref={sectionRef} id="project" className='app-showcase'>
         <div className='w-full'>
             <div className='showcaselayout'>
                 {/* {left} */}
                 <div className='first-project-wrapper' ref={project1Ref}>
+
                     <div className='image-wrapper'>
+                      <a href="https://staysphere.onrender.com/"  className='project-link' target='_blank' rel='noopener noreferrer'>
                         <img src="/images/project1.jpg" alt='StaySphere'></img>
+                      </a>
                     </div>
                      <div className='text-content'>
                         <h2> StaySphere is a web platform that helps users discover, book, and manage short-term stays and accommodations with ease.</h2>

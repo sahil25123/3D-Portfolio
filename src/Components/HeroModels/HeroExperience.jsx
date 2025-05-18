@@ -67,7 +67,12 @@ const HeroExperience = () => {
             <Sahil />
           </AnimatedModel>
         </PresentationControls>
-        <OrbitControls enableZoom={true} enableRotate={false} />
+        <OrbitControls 
+          enableZoom={true} 
+          enableRotate={false}
+          minDistance={5}
+          maxDistance={12}
+        />
 
         <HeroLights />
         <Particles count={50}/>
