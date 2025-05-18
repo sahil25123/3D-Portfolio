@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar'
 import LogoSection from '../Components/LogoSection'
 import FeatureCards from '../Sections/FeatureCards'
 import TechStack from '../Sections/TechStack'
+import Contact from '../Sections/Contact'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <FeatureCards/>
       {/* Journey Section */}
       <TechStack/>
+      <Contact/>
     </div>
   )
 }
