@@ -53,35 +53,83 @@ const Showcase = () => {
             <div className='showcaselayout'>
                 {/* {left} */}
                 <div className='first-project-wrapper' ref={project1Ref}>
-
                     <div className='image-wrapper'>
-                      <a href="https://staysphere.onrender.com/"  className='project-link' target='_blank' rel='noopener noreferrer'>
                         <img src="/images/project1.jpg" alt='StaySphere'></img>
-                      </a>
+                        <div className='project-overlay'>
+                            <a 
+                                href="https://staysphere.onrender.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className='project-link'
+                            >
+                                View Live
+                            </a>
+                            <a 
+                                href="https://github.com/sahil25123/StaySphere" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className='project-link'
+                            >
+                                View Repo
+                            </a>
+                        </div>
                     </div>
-                     <div className='text-content'>
-                        <h2> StaySphere is a web platform that helps users discover, book, and manage short-term stays and accommodations with ease.</h2>
+                    <div className='text-content'>
+                        <h2>StaySphere is a web platform that helps users discover, book, and manage short-term stays and accommodations with ease.</h2>
                         <p className='text-white-50 md:text-xl'>
                             A website built with MongoDB, Express.js, Node.js, EJS, and TailwindCSS — delivering a fast and user-friendly experience.
                         </p>
-                     </div>
+                    </div>
                 </div>
                 {/* Right */}
-                <div className='project-list-wrapper overflow-hidden' >
+                <div className='project-list-wrapper'>
                     <div className='project' ref={project2Ref}>
                         <div className='image-wrapper bg-[#F5F3FF]'>
-                            <img src='/images/project2.png' alt="project2"></img>
+                            <img src='/images/project2.png' alt="Chatter Box"></img>
+                            <div className='project-overlay'>
+                                <a 
+                                    href="https://chatter-box-av2e.onrender.com/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className='project-link'
+                                >
+                                    View Live
+                                </a>
+                                <a 
+                                    href="https://github.com/sahil25123/Chat-app" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className='project-link'
+                                >
+                                    View Repo
+                                </a>
+                            </div>
                         </div>
                         <h2>Chatter Box</h2>
-                        
                     </div>
-
                     <div className='project' ref={project3Ref}>
                         <div className='image-wrapper bg-[#EEF3FF]'>
                             <img src='/images/project3.png' alt="React Hangman Game"></img>
+                            <div className='project-overlay'>
+                                <a 
+                                    href="https://sahil25123.github.io/Hangman_React/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className='project-link'
+                                >
+                                    View Live
+                                </a>
+                                <a 
+                                    href="https://github.com/sahil25123/Hangman_React" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className='project-link'
+                                >
+                                    View Repo
+                                </a>
+                            </div>
                         </div>
                         <h2>Hangman Game</h2>
-                        
                     </div>
                 </div>
             </div>
