@@ -3,16 +3,12 @@ import gsap from "gsap";
 
 import TitleHeader from "../Components/TitleHeader";
 import TechIcon from "../Components/TechLogos/TechIcon";
-import { techStackIcons } from "../constants";
+import { techStackIcons, techStackImgs } from "../constants";
 // import { techStackImgs } from "../constants";
 
 const TechStack = () => {
   // Animate the tech cards in the skills section
   useGSAP(() => {
-    // This animation is triggered when the user scrolls to the #skills wrapper
-    // The animation starts when the top of the wrapper is at the center of the screen
-    // The animation is staggered, meaning each card will animate in sequence
-    // The animation ease is set to "power2.inOut", which is a slow-in fast-out ease
     gsap.fromTo(
       ".tech-card",
       {
@@ -72,7 +68,7 @@ const TechStack = () => {
           ))}
 
           {/* This is for the img part */}
-          {/* {techStackImgs.map((techStackIcon, index) => (
+          {techStackImgs.map((techStackIcon, index) => (
             <div
               key={index}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
@@ -87,7 +83,7 @@ const TechStack = () => {
                 </div>
               </div>
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>
