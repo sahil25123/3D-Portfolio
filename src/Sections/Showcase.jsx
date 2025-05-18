@@ -134,6 +134,13 @@ const Showcase = () => {
                 </div>
             </div>
         </div>
+        {/* <div className="view-more-projects">
+            <button className="view-more-btn">
+                View More Projects
+                <img src="/images/arrow-right.svg" alt="arrow" />
+            </button>
+            
+        </div> */}
     </section>
   )
 }

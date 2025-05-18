@@ -155,7 +155,7 @@ section {
   }
 
   .app-showcase {
-    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex items-center justify-center;
+    @apply w-full mt-20 px-5 md:px-20 py-10 md:py-20 flex justify-center;
   
     .showcaselayout {
       @apply flex xl:flex-row flex-col gap-10 justify-between w-full;
@@ -242,6 +242,21 @@ section {
     }
   }
   
+  .view-more-projects {
+    @apply w-full flex justify-center items-center mt-10 mb-20;
+    
+    .view-more-btn {
+      @apply px-8 py-4 rounded-lg bg-white text-black font-semibold text-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-black hover:text-white flex items-center gap-3;
+      
+      img {
+        @apply w-5 h-5 transition-transform duration-300;
+      }
+      
+      &:hover img {
+        @apply translate-x-1;
+      }
+    }
+  }
 
   .cta-wrapper {
     @apply relative z-20 cursor-pointer;
