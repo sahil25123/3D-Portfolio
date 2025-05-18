@@ -50,7 +50,7 @@ const HeroExperience = () => {
         antialias: true,
         toneMapping: THREE.ACESFilmicToneMapping,
         toneMappingExposure: 1.2,
-        outputEncoding: THREE.sRGBEncoding
+        outputColorSpace: THREE.SRGBColorSpace,
       }}
     >
       <Suspense fallback={null}>
