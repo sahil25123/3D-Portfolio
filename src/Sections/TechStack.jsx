@@ -3,7 +3,7 @@ import gsap from "gsap";
 
 import TitleHeader from "../Components/TitleHeader";
 import TechIcon from "../Components/TechLogos/TechIcon";
-import { techStackIcons, techStackImgs } from "../constants";
+import { techStackIcons, techStackImgs } from "../Constants";
 // import { techStackImgs } from "../constants";
 
 const TechStack = () => {
