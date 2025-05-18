@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { expCards } from "../Constants";
 import TitleHeader from "../Components/TitleHeader";
-import GlowCard from "../components/GlowCard";
+import GlowCard from "../Components/GlowCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
