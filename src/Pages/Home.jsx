@@ -7,6 +7,7 @@ import FeatureCards from '../Sections/FeatureCards'
 import TechStack from '../Sections/TechStack'
 import Contact from '../Sections/Contact'
 import Footer from '../Sections/Footer'
+import Journey from '../Sections/Journey'
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <LogoSection/>
       <FeatureCards/>
       {/* Journey Section */}
+      <Journey/>
       <TechStack/>
       <Contact/>
       <Footer/>

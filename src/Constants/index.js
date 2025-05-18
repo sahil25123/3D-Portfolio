@@ -134,3 +134,42 @@ export const socialImgs = [
     url:"https://www.linkedin.com/in/sahil25123/"
   },
 ];
+
+export const expCards = [
+  {
+    review: "Embarked on my journey in Computer Science with a strong passion for technology and problem-solving.",
+    imgPath: "/images/journey1.png",
+    logoPath: "/images/niet-logo.png",
+    title: "Started B.Tech in CSE (Data Science)",
+    date: "August 2022 - Present",
+    responsibilities: [
+      "Enrolled at Noida Institute of Engineering and Technology (NIET).",
+      "Built a strong foundation in programming languages like Java, Python, and C.",
+      "Started exploring frontend development with HTML, CSS, and JavaScript.",
+    ],
+  },
+  {
+    review: "Enhanced my development skills by working on multiple personal projects and participating in hackathons.",
+    imgPath: "/images/journey2.png",
+    logoPath: "/images/project-logo.png",
+    title: "Hands-On Projects & Hackathons",
+    date: "2023 - Present",
+    responsibilities: [
+      "Created projects like Tic Tac Toe, Weather App, and a Therapy Management System.",
+      "Participated in Smart India Hackathon and Geeks for Geeks Hackathon.",
+      "Explored backend development using Node.js, Express, and MongoDB.",
+    ],
+  },
+  {
+    review: "Focused on full-stack development and advanced tools while applying for internships.",
+    imgPath: "/images/journey3.png",
+    logoPath: "/images/fullstack-logo.png",
+    title: "Learning MERN Stack & Freelance Practice",
+    date: "2024 - Present",
+    responsibilities: [
+      "Built StaySphere using Express, Node.js, and MongoDB.",
+      "Practicing full-stack projects with MERN stack.",
+      "Working on HealthLine, a telemedicine platform with WebRTC, Firebase, and Twilio API.",
+    ],
+  },
+];
