@@ -6,6 +6,7 @@ import LogoSection from '../Components/LogoSection'
 import FeatureCards from '../Sections/FeatureCards'
 import TechStack from '../Sections/TechStack'
 import Contact from '../Sections/Contact'
+import Footer from '../Sections/Footer'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       {/* Journey Section */}
       <TechStack/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
