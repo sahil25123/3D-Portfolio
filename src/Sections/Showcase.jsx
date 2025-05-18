@@ -57,7 +57,7 @@ const Showcase = () => {
                         <img src="/images/project1.jpg" alt='StaySphere'></img>
                         <div className='project-overlay'>
                             <a 
-                                href="https://staysphere.onrender.com" 
+                                href="https://stay-sphere-gules.vercel.app/" 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
                                 className='project-link'
