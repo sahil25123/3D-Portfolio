@@ -10,10 +10,10 @@ const Particles = ({ count = 300 }) => {
       temp.push({
         position: [
           (Math.random() - 0.5) * 10,
-          Math.random() * 10, // Y range [0, 10]
+          Math.random() * 8, // Reduced Y range for better visibility
           (Math.random() - 0.5) * 10,
         ],
-        speed: 0.005 + Math.random() * 0.001,
+        speed: 0.003 + Math.random() * 0.002, // Adjusted speed range
       });
     }
     return temp;
@@ -24,7 +24,7 @@ const Particles = ({ count = 300 }) => {
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
       y -= particles[i].speed;
-      if (y < -3) y = Math.random() * 10; // Reset threshold at -3
+      if (y < -2) y = Math.random() * 8; // Adjusted reset threshold
       positions[i * 3 + 1] = y;
     }
     mesh.current.geometry.attributes.position.needsUpdate = true;

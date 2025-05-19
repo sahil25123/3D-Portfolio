@@ -16,13 +16,13 @@ const AnimatedModel = ({ children, isMobile }) => {
     const t = state.clock.getElapsedTime()
     group.current.rotation.y = THREE.MathUtils.lerp(
       group.current.rotation.y,
-      Math.sin(t / 2) / 6,
-      0.1
+      Math.sin(t / 3) / 8,
+      0.05
     )
     group.current.position.y = THREE.MathUtils.lerp(
       group.current.position.y,
-      Math.sin(t / 2) / 4,
-      0.1
+      Math.sin(t / 3) / 6,
+      0.05
     )
   })
 

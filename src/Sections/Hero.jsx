@@ -11,20 +11,17 @@ const Hero = () => {
   useGSAP(() => {
     gsap.fromTo(".hero-text h1",
       {
-        y:50 , 
-        opacity:0 
+        y: 30, 
+        opacity: 0 
       },
       {
-        y:0, 
-        opacity :1,
-        stagger:0.3,
-        duration: 1,
-        ease: "power1.inOut"
-
+        y: 0, 
+        opacity: 1,
+        stagger: 0.15,
+        duration: 0.6,
+        ease: "power2.out"
       }
     )
-
-
   })
   return (
    <section id="hero" className='relative overflow-hidden'>

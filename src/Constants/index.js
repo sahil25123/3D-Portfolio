@@ -6,9 +6,9 @@
 
  export const counterItems = [
   { value: 10, suffix: "+", label: "Personal Projects" },
-  { value: 5, suffix: "+", label: "Hackathons & Events" },
-  { value: 3, suffix: "+", label: "Internships & Trainings" },
-  { value: 100, suffix: "+", label: "DSA Problems Solved" }
+  { value: 3, suffix: "+", label: "Hackathons & Events" },
+  { value: 2, suffix: "+", label: "Internships & Trainings" },
+  { value: 50, suffix: "+", label: "DSA Problems Solved" }
 ];
 
  export const navLinks = [
