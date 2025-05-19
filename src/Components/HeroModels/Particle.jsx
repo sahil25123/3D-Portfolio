@@ -1,4 +1,4 @@
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useCallback } from "react";
 import { useFrame } from "@react-three/fiber";
 
 const Particles = ({ count = 300 }) => {
@@ -9,33 +9,40 @@ const Particles = ({ count = 300 }) => {
     for (let i = 0; i < count; i++) {
       temp.push({
         position: [
-          (Math.random() - 0.5) * 10,
-          Math.random() * 8, // Reduced Y range for better visibility
-          (Math.random() - 0.5) * 10,
+          (Math.random() - 0.5) * 8, // Reduced spread
+          Math.random() * 6, // Reduced height range
+          (Math.random() - 0.5) * 8, // Reduced spread
         ],
-        speed: 0.003 + Math.random() * 0.002, // Adjusted speed range
+        speed: 0.002 + Math.random() * 0.001, // Reduced speed variation
       });
     }
     return temp;
   }, [count]);
 
-  useFrame(() => {
+  const updateParticles = useCallback(() => {
+    if (!mesh.current) return;
+    
     const positions = mesh.current.geometry.attributes.position.array;
     for (let i = 0; i < count; i++) {
       let y = positions[i * 3 + 1];
       y -= particles[i].speed;
-      if (y < -2) y = Math.random() * 8; // Adjusted reset threshold
+      if (y < -2) y = Math.random() * 6; // Reduced reset height
       positions[i * 3 + 1] = y;
     }
     mesh.current.geometry.attributes.position.needsUpdate = true;
-  });
+  }, [count, particles]);
 
-  const positions = new Float32Array(count * 3);
-  particles.forEach((p, i) => {
-    positions[i * 3] = p.position[0];
-    positions[i * 3 + 1] = p.position[1];
-    positions[i * 3 + 2] = p.position[2];
-  });
+  useFrame(updateParticles);
+
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    particles.forEach((p, i) => {
+      pos[i * 3] = p.position[0];
+      pos[i * 3 + 1] = p.position[1];
+      pos[i * 3 + 2] = p.position[2];
+    });
+    return pos;
+  }, [count, particles]);
 
   return (
     <points ref={mesh}>
@@ -49,9 +56,9 @@ const Particles = ({ count = 300 }) => {
       </bufferGeometry>
       <pointsMaterial
         color="#ffffff"
-        size={0.08}
+        size={0.06} // Reduced particle size
         transparent
-        opacity={0.9}
+        opacity={0.7} // Reduced opacity
         depthWrite={false}
       />
     </points>

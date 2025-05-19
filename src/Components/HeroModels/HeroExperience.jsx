@@ -1,6 +1,6 @@
 import { OrbitControls, Environment, ContactShadows, PresentationControls } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-import React, { Suspense } from 'react'
+import React, { Suspense, useCallback } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { Room } from './Room'
 import { Sahil } from './Sahil-GLB'
@@ -12,23 +12,38 @@ import Particles from './Particle'
 const AnimatedModel = ({ children, isMobile }) => {
   const group = React.useRef()
   
-  useFrame((state) => {
+  const updateAnimation = useCallback((state) => {
+    if (!group.current) return
+    
     const t = state.clock.getElapsedTime()
+    const rotation = Math.sin(t / 3) / 8
+    const position = Math.sin(t / 3) / 6
+    
     group.current.rotation.y = THREE.MathUtils.lerp(
       group.current.rotation.y,
-      Math.sin(t / 3) / 8,
+      rotation,
       0.05
     )
     group.current.position.y = THREE.MathUtils.lerp(
       group.current.position.y,
-      Math.sin(t / 3) / 6,
+      position,
       0.05
     )
-  })
+  }, [])
+
+  useFrame(updateAnimation)
 
   // Increased scale for both desktop and mobile
   return (
-    <group ref={group} scale={isMobile ? 2.2 : 3.5} position={[0, -2.8, 0]}>
+    <group 
+      ref={group} 
+      scale={isMobile ? 2.2 : 3.5} 
+      position={[
+        isMobile ? 1.5 : 0, // Add x offset for mobile
+        -2.8, 
+        0
+      ]}
+    >
       {children}
     </group>
   )
@@ -51,7 +66,10 @@ const HeroExperience = () => {
         toneMapping: THREE.ACESFilmicToneMapping,
         toneMappingExposure: 1.2,
         outputColorSpace: THREE.SRGBColorSpace,
+        powerPreference: "high-performance"
       }}
+      dpr={[1, 2]} // Limit pixel ratio for better performance
+      performance={{ min: 0.5 }} // Allow frame rate to drop to maintain performance
     >
       <Suspense fallback={null}>
         <PresentationControls
@@ -72,10 +90,11 @@ const HeroExperience = () => {
           enableRotate={false}
           minDistance={5}
           maxDistance={12}
+          enableDamping={false} // Disable damping for better performance
         />
 
         <HeroLights />
-        <Particles count={50}/>
+        <Particles count={30}/> {/* Reduced particle count */}
         
         {/* Environment and shadows */}
         <Environment preset="city" />
