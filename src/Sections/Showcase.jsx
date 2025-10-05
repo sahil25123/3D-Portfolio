@@ -109,10 +109,10 @@ const Showcase = () => {
                     </div>
                     <div className='project' ref={project3Ref}>
                         <div className='image-wrapper bg-[#EEF3FF]'>
-                            <img src='/images/project3.png' alt="React Hangman Game"></img>
+                            <img src='/images/project3.png' alt="PingUp-Social Media"></img>
                             <div className='project-overlay'>
                                 <a 
-                                    href="https://sahil25123.github.io/Hangman_React/" 
+                                    href="https://pingup-mern.vercel.app/" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className='project-link'
@@ -120,7 +120,7 @@ const Showcase = () => {
                                     View Live
                                 </a>
                                 <a 
-                                    href="https://github.com/sahil25123/Hangman_React" 
+                                    href="https://github.com/sahil25123/pingup-mern" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className='project-link'
@@ -129,7 +129,7 @@ const Showcase = () => {
                                 </a>
                             </div>
                         </div>
-                        <h2>Hangman Game</h2>
+                        <h2>PingUp - A Social Media Platform</h2>
                     </div>
                 </div>
             </div>
