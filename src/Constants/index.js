@@ -133,19 +133,21 @@ export const socialImgs = [
 
 export const expCards = [
   {
-    review: "Embarked on my journey in Computer Science with a strong passion for technology and problem-solving.",
+    review:
+      "Embarked on my journey in Computer Science with a strong passion for technology and problem-solving.",
     imgPath: "/images/niet-logo.png",
     logoPath: "/images/niet2.png",
     title: "Started B.Tech in CSE (Data Science)",
     date: "August 2022 - Present",
     responsibilities: [
       "Enrolled at Noida Institute of Engineering and Technology (NIET).",
-      "Built a strong foundation in programming languages like Java, Python.  ",
+      "Built a strong foundation in programming languages like Java, Python.",
       "Started exploring frontend development with HTML, CSS, and JavaScript.",
     ],
   },
   {
-    review: "Enhanced my development skills by working on multiple personal projects and participating in hackathons.",
+    review:
+      "Enhanced my development skills by working on multiple personal projects and participating in hackathons.",
     imgPath: "/images/hackathon.png",
     logoPath: "/images/hackathon-circle.png",
     title: "Hands-On Projects & Hackathons",
@@ -157,7 +159,8 @@ export const expCards = [
     ],
   },
   {
-    review: "Focused on full-stack development and advanced tools while applying for internships.",
+    review:
+      "Focused on full-stack development and advanced tools while applying for internships.",
     imgPath: "/images/image193.png",
     logoPath: "/images/image193.png",
     title: "Learning MERN Stack & Freelance Practice",
@@ -167,6 +170,20 @@ export const expCards = [
       "Practicing full-stack projects with MERN stack.",
       "Designed ChatterBox – a real-time chat and video call app using WebRTC, Socket.io, and Node.js.",
       "Working on HealthLine, a telemedicine platform with WebRTC, Firebase, and Twilio API.",
+    ],
+  },
+  {
+    review:
+      "Worked as a Full Stack Developer Intern at Site Galleria, contributing to PingGo by building new features, APIs, and enhancing the frontend experience.",
+    imgPath: "/images/sitegalleria.jpeg",
+    logoPath: "/images/site-galleria_logo.jpeg",
+    title: "Full Stack Developer Intern – Site Galleria",
+    date: "2025 - Present",
+    responsibilities: [
+      "Contributing to PingGo by developing new features and optimizing existing modules.",
+      "Building REST APIs for seamless integration between frontend and backend services.",
+      "Collaborating with the team to design scalable and maintainable code.",
+      "Applying full-stack technologies including React, Node.js, and MongoDB in real-world production environments."
     ],
   },
 ];
