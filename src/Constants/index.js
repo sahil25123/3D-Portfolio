@@ -78,7 +78,7 @@
     imgPath: "/images/solver.png",
     title: "Problem Solver",
     desc: "Enjoy tackling complex problems with logical thinking and a structured approach.",
-  }
+  } 
  
 ];
 

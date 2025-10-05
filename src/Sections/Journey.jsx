@@ -10,11 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Journey = () => {
   useGSAP(() => {
-    // Loop through each timeline card and animate them in
-    // as the user scrolls to each card
     gsap.utils.toArray(".timeline-card").forEach((card) => {
-      // Animate the card coming in from the left
-      // and fade in
+     
       gsap.from(card, {
         
         xPercent: -100,

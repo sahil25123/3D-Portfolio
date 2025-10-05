@@ -152,6 +152,29 @@ section {
         }
       }
     }
+
+    /* actions container for right-aligned buttons (contact, resume) */
+    .actions {
+      @apply ml-auto flex items-center gap-3;
+
+      /* style the existing contact button when used inside actions */
+      .contact-btn {
+        @apply flex;
+
+        .inner {
+          @apply px-4 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors duration-300;
+
+          span {
+            @apply group-hover:text-white transition-colors duration-300;
+          }
+        }
+      }
+
+      /* resume button styling */
+      .resume-btn {
+        @apply px-4 py-2 rounded-full bg-white text-black shadow-sm hover:shadow-md transition inline-flex items-center justify-center;
+      }
+    }
   }
 
   .app-showcase {
